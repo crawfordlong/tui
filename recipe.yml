@@ -1,7 +1,7 @@
 # This file can only be edited inside the uBlue image's git repository.
 
 # The image will be at "ghcr.io/yourusername/name".
-name: startingpoint
+name: tui
 
 # The native container image to build on top of.
 # Warning: Non-uBlue images might not work properly, due to missing components.
@@ -14,7 +14,7 @@ base-image: ghcr.io/ublue-os/silverblue-main
 fedora-version: 38
 
 # This description will be visible in the container metadata.
-description: A starting point for further customization of uBlue images. Make your own! https://ublue.it/making-your-own/
+description: A custom Fedora (Silverblue) operating system. Make your own! https://ublue.it/making-your-own/
 
 # These scripts will be executed during the container build.
 # Place scripts in the "scripts/" dir and put the corresponding filenames here.
@@ -47,8 +47,9 @@ rpm:
   # which greatly simplifies future maintenance of your custom recipe.
   repos:
     # Example (which also demonstrates version number expansion):
-    # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%FEDORA_VERSION%/atim-starship-fedora-%FEDORA_VERSION%.repo
-
+    - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%FEDORA_VERSION%/atim-starship-fedora-%FEDORA_VERSION%.repo
+    - https://copr.fedorainfracloud.org/coprs/varlad/helix/repo/fedora-%FEDORA_VERSION%/varlad-helix-fedora-%FEDORA_VERSION%.repo
+    - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
   # These RPMs will be installed from your enabled repositories (Fedora's own
   # repos, extra "repos" you've added, etc). The installation is automatically
   # performed via rpm-ostree during the image build, and will be pre-installed
@@ -64,6 +65,23 @@ rpm:
     # Add your own below:
     # Example:
     # - tilix
+    - syncthing
+    - tlp
+    - tlp-rdw
+    - rapid-photo-downloader
+    - easyeffects
+    - wireguard-tools
+    - tmux
+    - vim
+    - zstd
+    - yubikey-manager
+    - yubikey-manager-qt
+    - pam_yubico
+    - hplip
+    - hplip-gui
+    - tailscale
+    - starship
+    - helix
 
   # These RPMs will be removed from the system image. This step happens during
   # image build, BEFORE installing custom RPMs (from the "rpm.install" category).
@@ -89,3 +107,7 @@ firstboot:
   flatpaks:
     - io.github.celluloid_player.Celluloid
     - org.kde.krita
+    - com.microsoft.Edge
+    - com.visualstudio.code
+    - com.github.GradienceTeam.Gradience
+    - md.obsidian.Obsidian
