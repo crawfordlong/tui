@@ -50,7 +50,8 @@ jobs:
       fail-fast: false
       matrix:
         recipe:
-          - recipe.yml
+          - recipe-tui.yml
+          - recipe-kea.yml
 
     steps:
       # Checkout push-to-registry action GitHub repository
