@@ -47,10 +47,11 @@ rpm:
   # which greatly simplifies future maintenance of your custom recipe.
   repos:
     # Example (which also demonstrates version number expansion):
+    - https://copr.fedorainfracloud.org/coprs/atim/ripasso/repo/fedora-%FEDORA_VERSION%/atim-ripasso-fedora-%FEDORA_VERSION%.repo
     - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%FEDORA_VERSION%/atim-starship-fedora-%FEDORA_VERSION%.repo
     - https://copr.fedorainfracloud.org/coprs/varlad/helix/repo/fedora-%FEDORA_VERSION%/varlad-helix-fedora-%FEDORA_VERSION%.repo
     - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
-  # These RPMs will be installed from your enabled repositories (Fedora's own
+    # These RPMs will be installed from your enabled repositories (Fedora's own
   # repos, extra "repos" you've added, etc). The installation is automatically
   # performed via rpm-ostree during the image build, and will be pre-installed
   # at the "system level" in the final image.
@@ -81,6 +82,8 @@ rpm:
     - tailscale
     - starship
     - helix
+    - ripasso
+    - ripasso-gtk
    # - libvirt
    # - libvirt-client
    # - virt-manager
