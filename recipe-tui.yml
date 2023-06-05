@@ -64,7 +64,6 @@ rpm:
     - libadwaita
     # Add your own below:
     # Example:
-    # - tilix
     - syncthing
     - tlp
     - tlp-rdw
@@ -113,4 +112,10 @@ firstboot:
     - com.microsoft.Edge
     - com.visualstudio.code
     - com.github.GradienceTeam.Gradience
-    - md.obsidian.Obsidian
+    - com.logseq.Logseq
+    - com.usebottles.bottles
+    - com.mattjakeman.ExtensionManager
+    - com.github.tchx84.Flatseal
+    - org.gustavoperedo.FontDownloader
+    - org.gnome.seahorse.Application
+    - com.valvesoftware.Steam
