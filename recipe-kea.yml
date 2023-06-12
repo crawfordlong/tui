@@ -111,3 +111,5 @@ firstboot:
     - com.visualstudio.code
     - com.github.GradienceTeam.Gradience
     - md.obsidian.Obsidian
+    - com.bitwarden.desktop
+    
