@@ -14,7 +14,7 @@ base-image: ghcr.io/ublue-os/silverblue-main
 fedora-version: 38
 
 # This description will be visible in the container metadata.
-description: A custom Fedora (Silverblue) operating system. Make your own! https://ublue.it/making-your-own/
+description: A personal Fedora Silverblue variant, built from ublue-OS.
 
 # These scripts will be executed during the container build.
 # Place scripts in the "scripts/" dir and put the corresponding filenames here.
